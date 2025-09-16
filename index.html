@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>ยาเตรียม • Planner</title>
+  <link rel="stylesheet" href="style.css?v=1758027377"/>
+  <link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+<header class="appbar">
+  <div class="title">แอปวางแผนจ่ายยาเตรียม</div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>เลือกยาและช่วงเวลา</h2>
+    <div class="grid">
+      <label>วันที่เริ่ม<input type="date" id="startDate"></label>
+      <label>วันนัด<input type="date" id="endDate"></label>
+      <label>จำนวนวันทั้งหมด<input type="number" id="totalDays" min="1" placeholder="เช่น 90"></label>
+      <label>ml/day<input type="number" id="doseMlPerDay" min="0.01" step="0.01" placeholder="เช่น 5"></label>
+    </div>
+    <div class="grid">
+      <label>ค้นหาชื่อยา<input list="drugList" id="drugSearch" placeholder="พิมพ์บางส่วนของชื่อยา"></label>
+      <datalist id="drugList"></datalist>
+      <label>ชื่อยา<select id="drugSelect"></select></label>
+      <label>ความแรง<select id="strengthSelect"></select></label>
+      <label class="check"><input type="checkbox" id="rtmCheckbox"> ใช้ RTM (ถ้ารองรับ)</label>
+      <button id="addDrugBtn" class="accent">เพิ่มเข้ารายการ</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>รายการที่เลือก</h2>
+    <div class="table-wrap">
+      <table id="selectedTable">
+        <thead>
+          <tr>
+            <th>เลือก</th><th>ชื่อยา</th><th>ความแรง</th><th>ml/day</th><th>ขวด (ml)</th><th>อายุ(วัน)</th><th>RTM</th><th>ยาที่ใช้เตรียม/ขวด</th><th>คำนวณ</th><th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>ตารางสรุปสำหรับบุคลากร</h2>
+    <div class="table-wrap">
+      <table id="summaryTable">
+        <thead>
+          <tr>
+            <th>ชื่อยา</th><th>ความแรง</th><th>ml/day</th><th>ขวด (ml)</th><th>อายุ(วัน)</th><th>ยาที่ใช้เตรียม/ขวด</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="rtmNote" class="muted"></div>
+    <button id="printBtn">พิมพ์สรุป</button>
+  </section>
+</main>
+
+<script src="script.js?v=1758027377"></script>
+<script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }</script>
+</body></html>
