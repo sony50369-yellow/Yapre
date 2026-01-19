@@ -87,7 +87,7 @@
   {
     "name": "Beraprost syr.",
     "strength": "2 mcg/ml",
-    "bottle_ml": 25,
+    "bottle_ml": 10,
     "expiry_days": 7,
     "category": "Syrup/Solution/Suspension",
     "components": [
@@ -142,6 +142,23 @@
         "qty_num": 3.0,
         "qty_unit_th": "เม็ด",
         "qty_text": "3 เม็ด"
+      }
+    ],
+    "supports_rtm": false,
+    "rtm_shelf_days": 0
+  },
+  {
+    "name": "Clopidogrel susp.",
+    "strength": "5 mg/ml",
+    "bottle_ml": 30,
+    "expiry_days": 7,
+    "category": "Syrup/Solution/Suspension",
+    "components": [
+      {
+        "ingredient": "Clopidogrel 75 mg",
+        "qty_num": 2.0,
+        "qty_unit_th": "เม็ด",
+        "qty_text": "2 tab."
       }
     ],
     "supports_rtm": false,
@@ -218,7 +235,7 @@
   {
     "name": "Hydralazine syr.",
     "strength": "1 mg/ml",
-    "bottle_ml": 30,
+    "bottle_ml": 50,
     "expiry_days": 7,
     "category": "Syrup/Solution/Suspension",
     "components": [
